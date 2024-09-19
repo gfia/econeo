@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <title>Document</title>
+</head>
+<body>
+  <div class="w-full">
+    <main
+      class="
+        relative
+        max-w-xl
+        mx-auto
+        mt-10
+        mb-20
+        bg-white
+        py-8
+        px-10
+        rounded-md
+        shadow-md
+      "
+      x-data="{
+        selected: 0, 
+        tabs: [
+          {
+            item: 'Síntesis',
+            title: 'Síntesis',
+            imgSrc: 'imgSintesis.png',
+            icon: 'M19 19v4a4 4 0 1 0 4-4h-4Zm0 0v-6m0 6h-6m6-6V9a4 4 0 1 1 4 4h-4Zm0 0h-6m-4 0h-.007m0 0A4 4 0 1 1 13 9v4m-4.007 0H13m0 0v6m0 0v4a4 4 0 1 1-4-4h4Z',
+            content: 'Es una corriente de pensamiento que propone modernizar la teoría clásica haciendo énfasis en la organización de los sectores. Se la denomina también ecléctica ya que reune conceptos de otras escuelas.'
+          },
+          {
+            item: 'Orígen',
+            title: 'Orígen',
+            imgSrc: 'imgOrigen.jpg',
+            icon: 'M19 19v4a4 4 0 1 0 4-4h-4Zm0 0v-6m0 6h-6m6-6V9a4 4 0 1 1 4 4h-4Zm0 0h-6m-4 0h-.007m0 0A4 4 0 1 1 13 9v4m-4.007 0H13m0 0v6m0 0v4a4 4 0 1 1-4-4h4Z',
+            content: 'Su inicio se da entre 1928 y 1940 apróximadamente (aunque su ejecución se da a partir de la década del 50), y surge da como respuesta a los cambios estructurales y organizacionales de las empresas luego de la gran depresión y la segunda guerra mundial.\n Tuvo como punto fundamental la definición de la administración como una técnica social básica.'
+          },
+          {
+            item: 'Principios',
+            title: 'Principios',
+            imgSrc: 'imgPrincipios.jpg',
+            icon: 'M19 19v4a4 4 0 1 0 4-4h-4Zm0 0v-6m0 6h-6m6-6V9a4 4 0 1 1 4 4h-4Zm0 0h-6m-4 0h-.007m0 0A4 4 0 1 1 13 9v4m-4.007 0H13m0 0v6m0 0v4a4 4 0 1 1-4-4h4Z',
+            content: 'La escuela neoclásica retoma muchos conceptos de la escuela clásica y los adapta a las organizaciones flexibles de su tiempo. Debajo se nombran algunos principios generales resaltados por la escuela neoclásica:',
+            list:
+            [
+                {
+                    title: 'Objetivos Organizacionales',
+                    content: 'Definir claramente estos objetivos y asegurarse de que todas las actividades y recursos estén alineados para lograrlos. Cada miembro de la organización debe entender cómo su trabajo contribuye al éxito general de la empresa.', 
+                },
+                {
+                    title: 'Principios generales de la administración',
+                    content: 'Utilizan leyes de la escuela científica como criterios más o menos elásticos en la búsqueda de soluciones administrativas prácticas. Se basan en los principios generales sobre como planear, como organizar, como dirigir, como coordinar y como controlar.', 
+                },
+                {
+                    title: 'Departamentalización',
+                    content: 'División del trabajo en diferentes unidades o departamentos basados en funciones, productos, geografía, entre otros criterios.', 
+                },
+                {
+                    title: 'Autoridad y Responsabilidad',
+                    content: 'La autoridad dada a un individuo o departamento debe ir acompañada de la responsabilidad correspondiente. Es crucial que el poder de toma de decisiones sea claro y esté alineado con las metas organizacionales, asegurando responsabilidad por las acciones tomadas.', 
+                },
+                {
+                    title: 'Unidad de Dirección y Mando',
+                    content: 'Cada grupo de actividades con el mismo objetivo debe estar dirigido por un solo líder con un único plan.', 
+                },
+                {
+                    title: 'Disciplina',
+                    content: 'Respeto a las reglas y procedimientos establecidos, incluye el respeto mutuo entre empleados y la administración.', 
+                },
+                {
+                    title: 'Centralización vs. Descentralización',
+                    content: 'La centralización o descentralización de la autoridad debe ser decidida en función de las necesidades particulares de la organización.', 
+                },
+            ]
+          },
+          {
+            item: 'Critícas',
+            title: 'Critícas',
+            imgSrc: 'imgCriticas.jpg',
+            icon: 'M19 19v4a4 4 0 1 0 4-4h-4Zm0 0v-6m0 6h-6m6-6V9a4 4 0 1 1 4 4h-4Zm0 0h-6m-4 0h-.007m0 0A4 4 0 1 1 13 9v4m-4.007 0H13m0 0v6m0 0v4a4 4 0 1 1-4-4h4Z',
+            content: 'Al ser continuadores o `reafirmadores` de la escuela neoclásica, se considera que no hicieron aportes sutanciales. Más bien se dice que fueron los encargados de organizar los distintos conceptos existentes hasta el momento y los adaptan a su realidad.\n Otro punto negativo, es el hecho de que al centrarse solamente en objetivos, tendían a ignorar algunos factores económicos y sociales.'
+          },
+          {
+            item: 'Exponentes',
+            title: 'Exponentes',
+            imgSrc: 'imgExponentes.jpg',
+            icon: 'M19 19v4a4 4 0 1 0 4-4h-4Zm0 0v-6m0 6h-6m6-6V9a4 4 0 1 1 4 4h-4Zm0 0h-6m-4 0h-.007m0 0A4 4 0 1 1 13 9v4m-4.007 0H13m0 0v6m0 0v4a4 4 0 1 1-4-4h4Z',
+            content: 'La escuela neoclásica se puede enfocar desde el factor industrial y fabríl o desde el factor administrativo. A fines de la materia, nos enfocaremos solamente en los exponentes administrativos de la misma:',
+            list:
+            [
+                {
+                    title: 'Luther Gulick',
+                    imgSrc: 'imgExponentesGulick.jpg',
+                    content: 'Gulick estipulaba que la tarea de administar constaba de 7 elementos: Planificar, organizar formar al plantel, dirigir, coordinar, rendir cuentas y confeccionar presupuestos. Su obra más destacada en el ámbito administrativo es `Notas sobre la teoría de organización`.', 
+                },
+                {
+                    title: 'Lyndall Urwick',
+                    imgSrc: 'imgExponentesUrwick.jpg',
+                    content: 'Urwick planteaa que los elementos de la administración son: Investigar, preveer, planificar, organizar, coordinar, mandar y controlar. A su vez dice que una empresa no puede desarrollarse en torno a personas. Escribió `Los elementos de administración de negocios`.', 
+                },
+                {
+                    title: 'Peter F. Druker',
+                    imgSrc: 'imgExponentesDrucker.jpg',
+                    content: 'Para Drucker, aunque las organizaciones sean distintas, comparten tres aspectos importantes: Objetivos, administración y desempeño individual. También deben estar presentes la eficiencia (uso de los recursos) y eficacia (lograr los objetivos). Una de sus obras más célebres fue `La práctica del management`.', 
+                },
+                {
+                    title: 'James D. Mooney',
+                    imgSrc: 'imgExponentesMooney.jpg',
+                    content: 'Según Mooney, todas las organizaciones se componen de un sistemas de relaciones superior-subordinados con una cierta jerarquía. A su vez definió 4 principios: De coordinación, escalonamiento, funcional y de relación Plana Mayor - Línea.', 
+                },
+                {
+                    title: 'William H. Newman',
+                    imgSrc: 'imgExponentesNewman.jpg',
+                    content: 'Newman define a la dirección como un proceso social, tomando a la motivación como un efecto de la misma en un plano secundario. A su vez, fijó un límite a los subordinados (3 a 7 para tareas de alto nivel y entre 15 y 20 para tareas de bajo nivel).', 
+                },
+                {
+                    title: 'Harold Koontz',
+                    imgSrc: 'imgExponentesKoontz.jpg',
+                    content: 'Koontz plantea que las líneas de mando deben ser claras y un subordinado sólamente debe responder a un supervisor. A su vez, plantea que la autoridad es la única fuerza cohesiva existente en las empresas. Entre sus más de 11 obras y 90 colaboraciones en artículos destacan: `Administración, una perspectiva global` y `Elementos de la administración`.', 
+                },
+            ]
+          }
+        ]
+      }"
+    >
+      <menu class="absolute top-10 -left-36 bg-gray-900 w-36 rounded-l-md">
+        <ul>
+          <template x-for="(tab, index) in tabs">
+            <li>
+              <button
+                class="text-gray-400 hover:text-white block w-full p-3"
+                @click="selected = index"
+                :class="selected === index ? 'text-white' : ''"
+              >
+                <span class="block w-12 mx-auto" x-text="tab.item">
+                </span>
+                
+              </button>
+            </li>
+          </template>
+        </ul>
+      </menu>
+      <article>
+        <h1 class="text-2xl font-bold" x-text="tabs[selected]['title']"></h1>
+        <hr class="my-2" />
+        <template x-if="tabs[selected]['imgSrc']">
+            <img :src="tabs[selected]['imgSrc']"/>
+        </template>
+        <p class="mb-2 leading-relaxed" x-html="tabs[selected]['content']"></p>
+        <template x-if="tabs[selected]['list']">
+            <ul>
+                <template x-for="(listItem, index) in tabs[selected]['list']">
+                    <li>
+                      <div class='flex items-center justify-center' x-data="{ reportsOpen: false }">
+                            <div class='w-full max-w-lg px-10 py-0 mx-auto bg-white rounded-lg shadow-xl'>
+                                <div class='max-w-md mx-auto'>
+                                    <div @click="reportsOpen = !reportsOpen" class='flex items-center text-gray-900 w-full border-b overflow-hidden mt-12 md:mt-0 mb-5 mx-auto'>
+                                        <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>          
+                                            </div>
+                                            <div class='flex items-center px-2 py-2'>
+                                                <div class='mx-3'>
+                                                    <button class="hover:underline font-bold" x-text="listItem.title"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- CONDICION PARA SI HAY IMG -->
+                                        <template x-if="listItem.imgSrc">
+                                          <div class="grid md:grid-rows-[_minmax(50%,_75%)_1fr] justify-items-center"x-cloak x-show="reportsOpen">
+                                              <img :src="listItem.imgSrc"/>
+                                              <div class="flex p-5 md:p-2 w-full transform transition duration-300 ease-in-out border-b pb-10"
+                                              x-html="listItem.content" x-collapse x-collapse.duration.500ms >
+                                              </div>
+                                          </div>
+                                      </template>
+                                      <template x-if="!listItem.imgSrc">
+                                        <div x-cloak x-show="reportsOpen">
+                                            <div class="flex p-5 md:p-2 w-full transform transition duration-300 ease-in-out border-b pb-10"
+                                            x-html="listItem.content" x-collapse x-collapse.duration.500ms >
+                                            </div>
+                                        </div>
+                                    </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                  </template>
+            </ul>
+        </template>
+      </article>
+    </main>
+  </div>  
+    
+    	
+</body>
+</html>
